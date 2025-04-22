@@ -39,23 +39,10 @@ class Main(object):
         self.mIoU_metric = mIoU(1)
         self.nIoU_metric = nIoU(1)
         
-        #Epoch-4_IoU-0.4637.pkl    MDvsFA_cGAN
-        #Epoch-120_IoU-0.7382.pkl sirst_aug
-        #Epoch-116_IoU-0.6490.pkl   1k
         
-        # + SA  
-        #aug   Epoch- 43_IoU-0.7545.pkl
-        #cGAN  Epoch-  5_IoU-0.4506.pkl
-        #MDFA Epoch- 32_IoU-0.5313.pkl
-        #1k Epoch- 52_IoU-0.6466.pkl
-        #87
-        folder_name = 'Epoch- 99_IoU-0.5133.pkl'
-        # folder_name = 'Epoch-56_IoU-0.7659.pkl'   
-        # folder_name = 'Epoch- 99_IoU-0.5133.pkl'
-        #path =  './result/' + self.args.dataset  + '/checkpoint'
-        # path =  '/data/liqiang/zw/result/' + self.args.dataset  + '/checkpoint_3_1_4_4_2_e_1025_1k'
+
+        folder_name = 'Epoch- XXX_IoU-0.5133.pkl'
         path =  '/data/liqiang/zw/result/' + self.args.dataset  + '/checkpoint_3_1_4_0926_cgan'
-        # path =  '/data/liqiang/zw/result/' + self.args.dataset  + '/checkpoint_3_1_4_0926_cgan'
         self.load_pkl = ops.join(path, folder_name)
         self.net = torch.load(self.load_pkl)
 
